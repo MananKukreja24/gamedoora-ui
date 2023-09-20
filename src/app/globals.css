@@ -1,3 +1,113 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0;
+ 
+
+}
+
+.sendButton {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: black;
+}
+
+form > div {
+  @apply flex flex-col gap-2;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+
+.input-container input {
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 6px;
+  background-color: #FCDDA8;
+  width: 100%;
+}
+
+.border-label {
+  position: absolute;
+  top: -6px;
+  left: 8px;
+  font-size: 12px;
+  background-color: #FCDDA8;
+  padding: 0 4px;
+  color: #333;
+  transition: top 0.2s, left 0.2s, font-size 0.2s;
+}
+
+.border-label1 {
+  position: absolute;
+  top: -6px;
+  right: 200px;
+  font-size: 12px;
+  background-color: #FCDDA8;
+  padding: 0 4px;
+  color: #333;
+  transition: top 0.2s, left 0.2s, font-size 0.2s;
+}
+
+
+
+.input-container input:focus + .border-label,
+.input-container input:not(:placeholder-shown) + .border-label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  background-color: #FCDDA8;
+  padding: 0 4px;
+  color: #333;
+}
+
+.input-container input:focus + .border-label1,
+.input-container input:not(:placeholder-shown) + .border-label1 {
+  top: -10px;
+
+  background-color: #FCDDA8;
+  padding: 0 4px;
+  color: #333;
+}
+
+.input-container-grid {
+  margin-bottom: 20px;
+}
+
+.input-container-grid input {
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 6px;
+  background-color: #FCDDA8;
+  width: 180%;
+}
+
+.input-container-grid .col-span-1:first-child input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  width: 100%;
+}
+
+.input-container-grid .col-span-1:last-child input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%;
+}
+
+.input-container-grid .col-span-1:first-child input,
+.input-container-grid .col-span-1:last-child input {
+  border-left: 2px solid black;
+}
