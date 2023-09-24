@@ -3,12 +3,11 @@
 @import 'tailwindcss/utilities';
 
 body {
-  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 0;
- 
-
+  background-color: #DAD5D5;
+  height: 100vh; 
 }
 
 .sendButton {
@@ -19,6 +18,47 @@ body {
 
 .sendButton:hover {
   background-color: black;
+}
+
+
+@media (min-width: 640px) {
+ 
+  body {
+    font-size: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+ 
+  .text-center-md {
+    text-align: center;
+  }
+
+ 
+  .md\:sendButton {
+    padding: 15px 30px;
+    background-color: #36454F;
+  }
+
+ 
+  .md\:input-container input {
+    width: 100%;
+  }
+
+ 
+}
+
+
+@media (min-width: 1024px) {
+  
+  .lg\:container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+ 
 }
 
 form > div {
